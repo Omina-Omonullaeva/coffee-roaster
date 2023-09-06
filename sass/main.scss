@@ -109,24 +109,60 @@ body{
 }
 
 .site-header__nav {
+    position: absolute;
+    top: 92px;
+    left: 0;
     display: none;
+    text-align: center;
+    width: 100vw;
+    height: 564px;
+    background: linear-gradient(#fff 50.5%, #fefcf779 100%);
 }
 
-@media only screen and (min-width: 576px) {
+.site-header__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 40px;
+}
+
+.site-header__link {
+    color: #333D4B;
+    font-family: "Fraunces";
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+}
+
+.open .site-header__btn {
+    background-image: url(../images/close.svg);
+}
+
+.open .site-header__nav {
+    display: block;
+}
+
+@media only screen and (min-width: 620px) {
     .site-header__btn {
         display: none;
     }
     
     .site-header__nav {
-        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        display: flex;
     }
     
     .site-header__list {
         display: flex;
+        flex-direction: row;
         gap: 33px;
+        padding: 0;
     }
     
     .site-header__link {
+        text-transform: uppercase;
         color: #83888F;
         font-size: 12px;
         font-weight: 700;
